@@ -7,6 +7,7 @@
         Horror,
         Romance,
         Drama,
-        Documentary
+        Documentary,
+        Cartoon
     }
 }

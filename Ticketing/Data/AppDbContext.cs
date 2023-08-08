@@ -13,18 +13,27 @@ namespace Ticketing.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            modelBuilder.Entity<Actor_Movie>().HasKey(x=> new
+
+            modelBuilder.Entity<Actor_Movie>().HasKey(x => new
             {
                 x.MovieId,
-                x.ActorId    
-            });    
+                x.ActorId
+            });
+            //modelBuilder.Entity<Actor_Movie>().HasKey(am => new
+            //{
+            //    am.ActorId,
+            //    am.MovieId
+            //});
 
-            modelBuilder.Entity<Actor_Movie>().HasOne(m=>m.Movie)
-                .WithMany(x=>x.Actors_Movies).HasForeignKey(m=>m.MovieId);
+            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie)
+                .WithMany(x => x.Actors_Movies).HasForeignKey(m => m.MovieId);
 
             modelBuilder.Entity<Actor_Movie>().HasOne(a => a.Actor)
                .WithMany(x => x.Actors_Movies).HasForeignKey(a => a.ActorId);
+
+            //modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.MovieId);
+            //modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.ActorId);
+
 
             base.OnModelCreating(modelBuilder);
         }
