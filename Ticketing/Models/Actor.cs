@@ -9,7 +9,7 @@ namespace Ticketing.Models
         public string FullName { get; set; }
         [Display(Name = "Biography")]
         public string Bio { get; set; }
-        [Display(Name = "Profile Picture URL")]
+        [Display(Name = "Profile Picture")]
         public string ProfilePictureUrl { get; set; }
 
         //Relationships
