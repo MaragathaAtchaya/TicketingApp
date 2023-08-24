@@ -6,7 +6,7 @@
 
 <head>
     <script src="https://kit.fontawesome.com/db02a3cd59.js" crossorigin="anonymous"></script>
-   
+
 </head>
 
 <div class="row">
@@ -21,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var item in Model)
+                @foreach (var item in Model)
                 {
                     <tr>
                         <td class="align-middle">
@@ -34,9 +34,9 @@
                             @Html.DisplayFor(modelitem => item.Bio)
                         </td>
                         <td class="align-middle">
-                            <a class="btn btn-outline-primary text-black"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit </a>
-                            <a class="btn btn-outline-info text-black"><i class="fa fa-info-circle"></i>Details </a>
-                            <a class="btn btn-danger"><i class=" fa  fa-trash-o fa-fw" aria-hidden="true"></i> Delete</a>
+                            <a class="btn btn-outline-primary text-black" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit </a>
+                            <a class="btn btn-outline-info text-black" asp-controller="Actors" asp-action="Details" asp-route-id="@item.Id" ><i class="fa fa-info-circle"></i>Details </a>
+                            <a class="btn btn-danger"  asp-action="Delete" asp-route-id="@item.Id"><i class=" fa  fa-trash-o fa-fw" aria-hidden="true"></i> Delete</a>
                         </td>
                     </tr>
                 }
@@ -44,5 +44,10 @@
         </table>
 
     </div>
+
+</div>
+
+<div class="text-white float-end" >
+    <a class="btn btn-info" asp-controller="Actors" asp-action="Create"><i class="fa fa-plus"></i>Add New </a>
 
 </div>

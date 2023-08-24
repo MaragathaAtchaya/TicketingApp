@@ -29,17 +29,7 @@
                             
                         </li>
                         
-                        @* <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-gear"></i> Management
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" asp-controller="Cinemas" asp-action="Index"> Cinemas</a>
-                                <a class="dropdown-item" asp-controller="Producers" asp-action="Index"> Producers</a>
-                                <a class="dropdown-item" asp-controller="Actors" asp-action="Index"> Actors</a>
-                            </div>
-                        </li>
- *@
+                
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-gear"></i> Management
@@ -59,10 +49,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
 
-                   @*  <form class="form-inline my-2 my-lg-0" asp-controller="Movies" asp-action="Filter">
-                        <input name="searchString" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form> *@
+                  
                 </div>
             </div>
         </nav>
@@ -73,11 +60,11 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - Ticketing 
         </div>
-    </footer>
+    </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
